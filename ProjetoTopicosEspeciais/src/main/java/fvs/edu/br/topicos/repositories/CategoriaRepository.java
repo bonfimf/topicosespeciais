@@ -1,9 +1,12 @@
+
 package fvs.edu.br.topicos.repositories;
 
-public class CategoriaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-	public CategoriaRepository() {
-		// TODO Auto-generated constructor stub
-	}
+import fvs.edu.br.topicos.domain.Categoria;
+
+@Repository
+public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
 }
