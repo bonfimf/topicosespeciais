@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
 @Entity
 public class Estado implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -22,7 +21,7 @@ public class Estado implements Serializable{
 	private String nome;
 	
 	@OneToMany(mappedBy="estado")
-	private List<Cidade> cidade = new ArrayList<>();
+	private List<Cidade> cidades = new ArrayList<>();
 	
 	public Estado() {
 		
@@ -50,12 +49,12 @@ public class Estado implements Serializable{
 		this.nome = nome;
 	}
 
-	public List<Cidade> getCidade() {
-		return cidade;
+	public List<Cidade> getCidades() {
+		return cidades;
 	}
 
-	public void setCidade(List<Cidade> cidade) {
-		this.cidade = cidade;
+	public void setCidades(List<Cidade> cidades) {
+		this.cidades = cidades;
 	}
 
 	@Override
@@ -82,7 +81,8 @@ public class Estado implements Serializable{
 			return false;
 		return true;
 	}
+	
+	
+	
 
-	
-	
 }

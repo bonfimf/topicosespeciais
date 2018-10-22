@@ -9,11 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
 @Entity
 public class Cidade implements Serializable{
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -23,11 +22,9 @@ public class Cidade implements Serializable{
 	@JoinColumn(name="estado_id")
 	private Estado estado;
 	
-	
 	public Cidade() {
 		
 	}
-
 
 	public Cidade(Integer id, String nome, Estado estado) {
 		super();
@@ -36,39 +33,28 @@ public class Cidade implements Serializable{
 		this.estado = estado;
 	}
 
-
 	public Integer getId() {
 		return id;
 	}
-
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
 	public Estado getEstado() {
 		return estado;
 	}
 
-
 	public void setEstado(Estado estado) {
 		this.estado = estado;
-	}
-
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 	@Override
@@ -78,7 +64,6 @@ public class Cidade implements Serializable{
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -96,5 +81,6 @@ public class Cidade implements Serializable{
 			return false;
 		return true;
 	}
-
+	
+	
 }

@@ -1,9 +1,15 @@
 package fvs.edu.br.topicos.enums;
 
-public class TipoCliente {
+public enum TipoCliente {
 
-	public TipoCliente() {
-		// TODO Auto-generated constructor stub
+	PESSOAFISICA(1),
+	PESSOAJURIDICA(2);
+
+	int tipoPessoa;
+	
+	TipoCliente(int tipoPessoa){
+		this.tipoPessoa = tipoPessoa;
 	}
-
+	
+	
 }

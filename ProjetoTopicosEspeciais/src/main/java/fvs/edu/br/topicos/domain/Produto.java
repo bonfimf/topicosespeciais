@@ -24,11 +24,12 @@ public class Produto implements Serializable{
 	private String nome;
 	private Double preco;
 	
-
+	
 	@JsonIgnore
 	@ManyToMany
-	@JoinTable(name = "PRODUTO_CATEGORIA", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
-	
+	@JoinTable(name = "PRODUTO_CATEGORIA", 
+	joinColumns = @JoinColumn(name = "produto_id"),
+	inverseJoinColumns = @JoinColumn(name = "categoria_id"))
 	List<Categoria> categorias = new ArrayList<>();
 	
 	public Produto() {
@@ -98,5 +99,7 @@ public class Produto implements Serializable{
 			return false;
 		return true;
 	}
+	
+	
 	
 }
