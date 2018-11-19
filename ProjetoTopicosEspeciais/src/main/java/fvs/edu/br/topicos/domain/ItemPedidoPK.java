@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.ManyToOne;
 
-public class IntemPedidoPK implements Serializable{
+public class ItemPedidoPK implements Serializable{
 	private static final long serialVersionUID = 1L;
-
+	
 	@ManyToOne
 	private Pedido pedido;
 	
@@ -30,4 +30,5 @@ public class IntemPedidoPK implements Serializable{
 	}
 	
 	
+
 }
